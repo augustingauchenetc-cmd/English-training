@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENGLISH TRAINING</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+    }
+    header {
+      padding: 22px;
+      background: #17243a;
+      text-align: center;
+    }
+    header h1 { color: #60a5fa; }
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 25px 18px;
+    }
+    .hero {
+      text-align: center;
+      padding: 35px 15px;
+    }
+    .hero h2 { font-size: 32px; }
+    .card {
+      background: #1e293b;
+      padding: 22px;
+      border-radius: 14px;
+      margin: 18px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .premium { border: 1px solid #eab308; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🇬🇧 ENGLISH TRAINING</h1>
+  <p>Learn. Practice. Improve.</p>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Apprends l'anglais !</h2>
+    <p>Progresse à ton rythme grâce à nos cours et exercices.</p>
+    <button class="btn" onclick="startLesson()">
+      Commencer à apprendre
+    </button>
+  </section>
+
+  <section class="card">
+    <h2>📚 Version gratuite</h2>
+    <p>Découvre les bases de l'anglais.</p>
+    <ul>
+      <li>Vocabulaire</li>
+      <li>Grammaire</li>
+      <li>Quiz</li>
+      <li>Exercices quotidiens</li>
+    </ul>
+  </section>
+
+  <section class="card premium">
+    <h2>⭐ Version Premium</h2>
+    <p>Débloque davantage de cours et d'exercices.</p>
+    <ul>
+      <li>Tous les niveaux</li>
+      <li>Compréhension orale</li>
+      <li>Dialogues interactifs</li>
+      <li>Suivi avancé</li>
+    </ul>
+    <p>Offre Premium à venir.</p>
+  </section>
+
+  <section class="card" id="lesson">
+    <h2>🎯 Premier exercice</h2>
+    <p>Que signifie le mot "Hello" ?</p>
+    <button class="btn" onclick="checkAnswer('Bonjour')">Bonjour</button>
+    <button class="btn" onclick="checkAnswer('Merci')">Merci</button>
+    <p id="result"></p>
+  </section>
+</main>
+
+<footer>
+  ENGLISH TRAINING © 2026
+  <p>Apprends une langue, ouvre des possibilités.</p>
+</footer>
+
+<script>
+  function startLesson() {
+    document.getElementById("lesson").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+  function checkAnswer(answer) {
+    const result = document.getElementById("result");
+
+    if (answer === "Bonjour") {
+      result.textContent = "Bravo ! Bonne réponse ! 🎉";
+    } else {
+      result.textContent = "Essaie encore !";
+    }
+  }
+</script>
+
+</body>
+</html>
